@@ -6,7 +6,7 @@ public class CalulTest extends JFrame {
     CalulTest() {
         setTitle("계산기");
         setSize(520,250);
-        setLayout(new BorderLayout(1,1));
+        setLayout(new BorderLayout(0,0));
         showNorth();
         showCenter();
 
@@ -15,18 +15,20 @@ public class CalulTest extends JFrame {
         setVisible(true);
     }
     void showNorth(){
-        JPanel j1 = new JPanel(new GridLayout());
+        JPanel j1 = new JPanel(new GridLayout(0,3));
         JPanel j2 = new JPanel();
         JPanel j3 = new JPanel(new BorderLayout());
 
         JComboBox cb1 = new JComboBox();
         TextField tf1 = new TextField(5);
-        JButton his = new JButton("")
+        JButton his = new JButton("History");
         TextField tf = new TextField(100);
 
         cb1.setEditable(true);
-        j1.add(cb1,BorderLayout.WEST);
-        j1.add(tf1,BorderLayout.CENTER);
+
+        j1.add(cb1);
+        j1.add(tf1);
+        j1.add(his);
         j2.add(tf, BorderLayout.CENTER);
         j3.add(j1,BorderLayout.NORTH);
         j3.add(j2,BorderLayout.SOUTH);
