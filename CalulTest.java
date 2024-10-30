@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.EventListener;
 
 public class CalulTest extends JFrame {
@@ -57,8 +58,8 @@ public class CalulTest extends JFrame {
         JButton bk3 = new JButton("");
         bk3.setBackground(Color.BLACK);
         bk3.setForeground(Color.white);
-        JButton bk4 = new JButton("");
-        bk4.setBackground(Color.BLACK);
+        JButton bk4 = new JButton("+");
+        bk4.setBackground(Color.ORANGE);
         bk4.setForeground(Color.white);
         JButton bk5 = new JButton("7");
         bk5.setBackground(Color.GRAY);
