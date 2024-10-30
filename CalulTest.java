@@ -9,8 +9,6 @@ public class CalulTest extends JFrame {
         setLayout(new BorderLayout(0,0));
         showNorth();
         showCenter();
-
-
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
     }
@@ -19,7 +17,9 @@ public class CalulTest extends JFrame {
         JPanel j2 = new JPanel();
         JPanel j3 = new JPanel(new BorderLayout());
 
-        JComboBox cb1 = new JComboBox();
+
+        String[] kindCal = {"일반 계산기", "수면 시간 계산기"};
+        JComboBox cb1 = new JComboBox(kindCal);
         TextField tf1 = new TextField(5);
         JButton his = new JButton("History");
         TextField tf = new TextField(100);
@@ -30,8 +30,8 @@ public class CalulTest extends JFrame {
         j1.add(tf1);
         j1.add(his);
         j2.add(tf, BorderLayout.CENTER);
-        j3.add(j1,BorderLayout.NORTH);
-        j3.add(j2,BorderLayout.SOUTH);
+        j3.add(j2,BorderLayout.NORTH);
+        j3.add(j1,BorderLayout.SOUTH);
 
         add(j3,BorderLayout.NORTH);
 
